@@ -11,9 +11,9 @@ void addElement(int element) {
     if (count < SIZE) {
         arr[count] = element;
         count++;
-        printf("Eleman eklendi: %d\n", element);
+        printf("Element added: %d\n", element);
     } else {
-        printf("Dizi dolu, eleman eklenemiyor!\n");
+        printf("Array is full,cannot add element!\n");
     }
 }
 
@@ -26,23 +26,23 @@ void removeElement(int element) {
                 arr[j] = arr[j + 1];
             }
             count--;
-            printf("Eleman silindi: %d\n", element);
+            printf("Element remod: %d\n", element);
             break;
         }
     }
     if (!found) {
-        printf("Eleman bulunamadi: %d\n", element);
+        printf("Element not found: %d\n", element);
     }
 }
 
 void searchElement(int element) {
     for (int i = 0; i < count; i++) {
         if (arr[i] == element) {
-            printf("Eleman bulundu! Index: %d\n", i);
+            printf("Element found at! Index: %d\n", i);
             return;
         }
     }
-    printf("Eleman bulunamadi: %d\n", element);
+    printf("Element not founf: %d\n", element);
 }
 
 int main() {
